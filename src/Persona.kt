@@ -7,14 +7,14 @@ open class Persona(val nombre: String, private val anioNacimiento: Int) {
 
     var edad: Int = 0
         private set
-        get() = año - anioNacimiento
+        get() = anio - anioNacimiento
 
     open fun actividad() {
         println("$nombre está realizando una actividad.")
     }
 
     fun cumple() {
-        año += 1
+        anio += 1
         println("¡Feliz cumpleaños, $nombre! Ahora tienes $edad años.")
     }
 
@@ -23,6 +23,6 @@ open class Persona(val nombre: String, private val anioNacimiento: Int) {
     }
 
     companion object{
-        var año: Int = 2024
+        var anio: Int = 2024
     }
 }
